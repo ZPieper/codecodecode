@@ -1,0 +1,260 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+}
+
+#entire{
+    width: 970px;
+    height: 884px;
+    background-color: rgb(216, 216, 216);
+}
+
+#internet_header
+{
+    background-color: white;
+    display: block;
+}
+
+#internet_header img{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+}
+
+#large{
+    font-size: 230%;
+    vertical-align: 25px;
+}
+
+#dark_blue{
+    color: aqua;
+}
+
+#header{
+    background-color: blue;
+    display: block;
+    margin-top: -20px;
+    font-size: 200%;
+    height: 50px;
+    color: white;
+    padding-top: 10px;
+}
+
+#header span{
+    margin-left: 15px;
+}
+
+#sidebar{
+    display: inline-block;
+    width: 190px;
+    height: 250px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    font-weight: bold;
+    vertical-align: 230px;
+}
+
+.info{
+    display: inline-block;
+    margin-top: 25px;
+}
+
+ #red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+button{
+    color: white;
+    background-color: orange;
+    width: 180px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+#first{
+    background-color: blue;
+    margin-top: 30px;
+} 
+
+#phone_number{
+    color: lightskyblue;
+    font-size: 150%;
+    text-align: center;
+}
+
+.small{
+    font-size: 60%;
+    text-align: center;
+}
+
+#calling{
+    display: inline-block;
+    width: 150px;
+    height: 70px;
+    margin-bottom: -10px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+#home{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+#phone{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 400px;
+}
+
+#main_top{
+    display: inline-block;
+    width: 720px;
+    height: 270px;
+    margin-left: 40px;
+    vertical-align: 200px;
+}
+
+#DNS{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    vertical-align: 20px;
+}
+
+#DNS span{
+    display: inline;
+    margin-left: 5px;
+    font-size: 120%;
+    vertical-align: 5px;
+}
+
+#grey_bar{
+    background-color: grey;
+    height: 1px;
+    width: 700px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.heading{
+    color: blue;
+    display: block;
+    font-weight: bolder;
+    font-size: 120%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.bolded{
+    font-weight: bolder;
+}
+
+ul li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ol li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#advertisement{
+    display: inline-block;
+    width: 200px;
+    height: 320px;
+    background-image: url("ad_background.png");
+    margin-right: 40px;
+    vertical-align: 287px;
+}
+
+#bigger_white{
+    color: white;
+    font-size: 150%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#advertisement img{
+    display: inline-block;
+    height: 120px;
+    width: 80px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-left: 55px;
+}
+
+#advertisement input{
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+#main_bottom{
+    display: inline-block;
+    width: 700px;
+    height: 600px;
+    vertical-align: 100px;
+}
+
+#client_server{
+    display: inline-block;
+    width: 300px;
+    height: 120px;
+    margin-left: 200px;
+}
+
+.light_blue{
+    color: cornflowerblue;
+}
+
+#big_three{
+    display: inline-block;
+    width: 700px;
+    height: 125px;
+    border-left: 5px solid blue;
+    border-right: 5px solid blue;
+    border-top: 5px solid blue;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#big_three img{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+#bottom{
+    width: 970px;
+    height: 500px;
+    margin-top: -170px;
+}
+
+.paragraphs{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#details{
+    display: inline-block;
+    width: 580px;
+    height: 130px;
+}

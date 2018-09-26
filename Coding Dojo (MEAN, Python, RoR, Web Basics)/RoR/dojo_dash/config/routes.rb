@@ -1,0 +1,15 @@
+Rails.application.routes.draw do
+  get 'dojos' => 'dojos#show_dojos'
+  post 'dojos' => 'dojos#create_dojo'
+  get 'dojos/new' => 'dojos#create_dojo_form'
+  delete 'dojos/:id' => 'dojos#delete_dojo'
+  get 'dojos/:id' => 'dojos#show_one_dojo'
+  get 'dojos/:id/edit' => 'dojos#edit_dojo_form'
+  patch 'dojos/:id/edit' => 'dojos#edit_dojo'
+  get 'dojos/:id/students/new' => 'students#create_student_form'
+  post 'dojos/:id/students/new' => 'students#create_student'
+  delete 'dojos/:id/students/:person' => 'students#delete_student'
+  get 'dojos/:id/students/:person' => 'students#show_one_student'
+  get 'dojos/:id/students/:person/edit' => 'students#edit_student_form'
+  patch 'dojos/:id/students/:person/edit' => 'students#edit_student'
+end

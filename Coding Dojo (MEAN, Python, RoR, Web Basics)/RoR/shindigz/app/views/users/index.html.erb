@@ -1,0 +1,40 @@
+<h3>Welcome!</h3>
+
+<% if flash[:alert] %>
+	<% flash[:alert].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+
+<div class = "box">
+<h3>Register</h3>
+
+<form action = "/user" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<label>First Name: <input type = 'text' name = 'user[first_name]' required></label>
+	<label>Last Name: <input type = 'text' name = 'user[last_name]' required></label>
+	<label>Email: <input type = 'email' name = 'user[email]' required></label>
+	<label>
+		Location: <input type = 'text' name = 'user[city]' required>
+		<select name = 'user[state]' required>
+			<% all_states.each do |state| %>
+				<option value = "<%= state %>"><%= state %></option>
+			<% end %>
+		</select>
+	</label>
+	<label>Password: <input type = 'password' name = 'user[password]' required></label>
+	<label>Password Confirmation: <input type = 'password' name = 'user[password_confirmation]' required></label>
+	<input type = "submit" value = "Register">
+</form>
+</div>
+
+<div class = "box" id = "push_up">
+<h3>Log In</h3>
+
+<form action = "/user/login" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<label>Email: <input type = 'email' name = 'email' required></label>
+	<label>Password: <input type = 'password' name = 'password' required></label>
+	<input type = "submit" value = "Log In">
+</form>
+</div>

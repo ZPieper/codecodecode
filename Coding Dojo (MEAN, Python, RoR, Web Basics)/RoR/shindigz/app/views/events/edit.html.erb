@@ -1,0 +1,31 @@
+<h3>Edit Your Events</h3>
+
+<a href = "/events" class = "link">Events Dashboard</a>
+<a href = "/logout" class = "link">Logout</a>
+
+<% if flash[:alert] %>
+	<% flash[:alert].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+
+<div class = "box" id = "block">
+<form action = "/events/<%= @event.id %>/edit" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<input type="hidden" name="_method" value="patch">
+	<label>Name: <input type = 'text' name = 'event[name]' value = '<%= @event.name %>' required></label>
+	<label>Date: <input type = 'date' name = 'event[date]' value = '<%= @event.date %>' required></label>
+	<label>Location: 
+		<input type = 'text' name = 'event[city]' value = '<%= @event.city %>' required>
+		<select name = 'event[state]' required>
+			<option><%= @event.state %></option>
+			<% all_states.each do |state| %>
+					<% if state != @event.state %>
+						<option><%= state %></option>
+					<% end %>
+			<% end %>
+		</select>
+	</label>
+	<input type = "submit" value = "Update Event">
+</form>
+</div>

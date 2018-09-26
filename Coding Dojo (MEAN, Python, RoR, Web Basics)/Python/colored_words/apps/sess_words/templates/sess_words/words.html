@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Words</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'sess_words/words.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<div id = 'entire'>
+		<div id = 'creation'>
+		<form action = '/add_word' method = 'POST'>
+			{% csrf_token %}
+			<label><span id = 'enter'>Enter a new word</span><input type = 'text' name = 'word'></label>
+			<label><input type = 'radio' name = 'color' value = 'green' checked>Green</label>
+			<label><input type = 'radio' name = 'color' value = 'blue'>Blue</label>
+			<label><input type = 'radio' name = 'color' value = 'pink'>Pink</label>
+			<label><input type = 'radio' name = 'color' value = 'purple'>Purple</label>
+			<label><input type = 'radio' name = 'color' value = 'orange'>Orange</label>
+			<label><input type = 'radio' name = 'color' value = 'yellow'>Yellow</label>
+			<input type = 'hidden' name = 'font' value = "False">
+			<label><input type = 'checkbox' id = 'check' name = 'font' value = 'True'>For BIG font</label>
+			<label><input class = 'btn' type = 'submit' value = 'Add to List'></label>
+		</form>
+		</div>
+		<div id = 'list'>
+		<form action = '/clear' method = 'POST'>
+			{% csrf_token %}
+			<label><input class = 'btn' id = 'clear' type = 'submit' value = 'Clear List'></label>
+		</form>
+		<ul>
+		{% for element in request.session.inputs %}
+			<li class = "{{ element.color }} {{ element.font }}"> {{ element.word }} <span>{{ element.datetime }}</span></li>
+		{% endfor %}
+		</ul>
+		</div>
+	</div>
+</body>
+</html>

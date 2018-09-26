@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wall</title>
+</head>
+<body>
+{{ session['user'] }}
+<a href = '/logout'>Log Out</a>
+<h3>Post a Message</h3>
+<form action = '/postmessage' method = 'post'>
+<label><textarea name = "message"></textarea></label>
+<input type = 'submit' value = 'Post a Message'> 
+</form>
+	{% for messages in all_messages %}
+		<p>{{ messages['first_name'] }} {{ messages['last_name'] }} {{ messages['created_at'] }}</p>
+		<p>{{ messages['content'] }}</p>
+			{% for comments in all_comments %}
+				{% if messages['id'] == comments['id'] %}
+				<p>{{ comments['first_name'] }} {{ comments['last_name'] }} {{ comments['created_at'] }}</p>
+				<p>{{ comments['content'] }}</p>
+				{% endif %}
+			{% endfor %}
+		<form action = '/postcomment/{{ messages["id"] }}' method = 'post'>
+			<label><textarea name = "comment"></textarea></label>
+			<input type = 'submit' value = 'Post a Comment'>
+		</form>		
+	{% endfor %}
+</body>
+</html>

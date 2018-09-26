@@ -1,0 +1,50 @@
+<h3><%= @event.name %></h3>
+
+<a href = "/events" class = "link">Events Dashboard</a>
+<a href = "/logout" class = "link">Logout</a>
+
+<h4>Host: <%= @host %></h4>
+<h4>Date: <%= @event.date %></h4>
+<h4>Location: <%= @event.city %>, <%= @event.state %></h4>
+<h4>People who are joining the event: <%= @people_coming.count %></h4>
+
+<table class = "container" id = "push_up">
+	<tr>
+		<th>Name</th>
+		<th>Location</th>
+		<th>State</th>
+	</tr>
+	<% if @people_coming %>
+		<% @people_coming.each do |person| %>
+			<tr>
+				<td><%= person.first_name %> <%= person.last_name %></td>
+				<td><%= person.city %></td>
+				<td><%= person.state %></td>
+			</tr>
+		<% end %>
+	<% end %>
+</table>
+
+<div class = "container" id = "comment_box">
+	<h3>Discussion about this event:</h3>
+	<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<p>
+	<% if @comments %>
+		<% @comments.each do |comment| %>
+			<p><%= comment.user.first_name %> says: <%= comment.content %></p>
+			<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<p>
+		<% end %>
+	<% end %>
+
+	<% if flash[:alert] %>
+		<% flash[:alert].each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+
+<h4 id = "move_down">Add Comment:</h4>
+<form action = "/events/<%= @event.id %>/comment" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<input type = 'textarea' name = 'comment[content]' id = "text_area" required>
+	<input type = "submit" value = "Submit Comment">
+</form>
+</div>

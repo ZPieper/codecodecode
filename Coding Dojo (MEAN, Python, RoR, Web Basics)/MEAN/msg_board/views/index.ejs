@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wall 2.0</title>
+</head>
+<body>
+	<h1>The Dojo Message Board</h1>
+	<% if(typeof(errors) != 'undefined' ) { %>
+    	<% for (var x in errors) { %>
+    		<h3><%= errors[x].message %></h3>
+    	<% } %>
+    <% } %>
+
+	<form action = "/message" method = "post">
+		<label>Name: <input type = 'text' name = 'my_name' id = 'my_name'></label>
+		<label>Message: <input type = 'text' name = 'my_message' id = 'my_message'></label>
+		<input type = 'submit' value = 'Post message'>
+	</form>
+	<% if(typeof(messages) != 'undefined' ) { %>
+	<% if(messages.length >= 1) { %>
+    	<% for (var x in messages) { %>
+    		<h3>Name: <%= messages[x].name %></h3>
+    		<h3>Message: <%= messages[x].text %></h3>
+    		<% if(messages[x].comments.length >= 1) { %>
+    			<% for (var y = 0; y < messages[x].comments.length; y++) { %>
+    				<h4>Name: <%= messages[x].comments[y].name %></h4>
+    				<h4>Comment: <%= messages[x].comments[y].text %></h4>
+    			<% } %>
+    		<% } %>
+    		<form action = "/comment/<%=messages[x]._id%>" method = "post">
+				<label>Name: <input type = 'text' name = 'my_name_comm' id = 'my_name_comm'></label>
+				<label>Comment: <input type = 'text' name = 'my_comment' id = 'my_comment'></label>
+				<input type = 'submit' value = 'Post comment'>
+			</form>
+    	<% } %>
+    <% } %>
+   <% } %>
+</body>
+</html>

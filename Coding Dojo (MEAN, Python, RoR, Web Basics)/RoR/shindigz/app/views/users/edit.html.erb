@@ -1,0 +1,38 @@
+<h3>Edit Your Profile</h3>
+
+<a href = "/events" class = "link">Events Dashboard</a>
+<a href = "/logout" class = "link">Logout</a>
+
+<% if flash[:alert] %>
+	<% flash[:alert].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+
+<div class = "box" id = "block">
+<form action = "/user/<%= @user.id %>" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<input type="hidden" name="_method" value="patch">
+	<label>First Name: <input type = 'text' name = 'user[first_name]' value = '<%= @user.first_name %>' required></label>
+	<label>Last Name: <input type = 'text' name = 'user[last_name]' value = '<%= @user.last_name %>' required></label>
+	<label>Email: <input type = 'email' name = 'user[email]' value = '<%= @user.email %>' required></label>
+	<label>Location: 
+		<input type = 'text' name = 'user[city]' value = '<%= @user.city %>' required>
+		<select name = 'user[state]' required>
+			<option><%= @user.state %></option>
+			<% all_states.each do |state| %>
+					<% if state != @user.state %>
+						<option><%= state %></option>
+					<% end %>
+			<% end %>
+		</select>
+	</label>
+	<input type = "submit" value = "Update Records">
+</form>
+
+<form action = "/user/<%= @user.id %>" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<input type = "hidden" name = "_method" value = "delete">
+	<input type = "submit" value = "Delete Account" id = "delete_acc">
+</form>
+</div>

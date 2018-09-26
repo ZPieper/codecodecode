@@ -1,0 +1,16 @@
+<h1>Log In</h1>
+
+<p>Don't have an Account? <a href="/users/new">Register</a></p>
+
+<% if flash[:alert] %>
+	<% flash[:alert].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+
+<form action = "/sessions/new" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<label>Email: <input type = 'email' name = 'email' required></label>
+	<label>Password: <input type = 'password' name = 'password' required></label>
+	<input type = "submit" value = "Log In">
+</form>

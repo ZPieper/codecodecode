@@ -1,0 +1,199 @@
+#entire{
+    width: 970px;
+    height: 940px;
+    background-color: navy;
+}
+
+img{
+    display: inline-block;
+    width: 350px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#text{
+   display: block;
+   margin-left: 100px;
+}
+
+#header{
+    height: 150px;
+}
+
+#upper_right{
+   display: inline-block;
+   width: 300px;
+   height: 200px;
+   margin-left: 250px;
+   vertical-align: 50px;
+    }
+
+#searchbar
+{
+    background-color:black;
+    height: 60px;
+    width: 350px;
+    margin-left: -30px;
+}
+
+#searchbar input{
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 12px;
+}
+
+#searchbar button{
+    background-color:navy;
+    color: white;
+    height: 30px;
+    width: 50px;
+}
+
+.yellow{
+    color: yellow;
+}
+
+#text .yellow{
+    text-decoration: underline;
+}
+
+#white{
+    color: white;
+}
+
+.white_spaced{
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 10px;
+    color: white;
+    font-size: 150%;
+}
+
+#toolbar span:first-child{
+    margin-left: 50px;
+}
+
+#toolbar{
+    margin-left: 100px;
+    display: block;
+    background-color: cornflowerblue;
+    height: 50px;
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+#sidebar{
+    display: inline-block;
+    height: 400px;
+    width: 200px;
+    text-align: center;
+    margin-left: 80px;
+    vertical-align: 160px;;
+    color: white;
+}
+
+#sidebar ul li
+{
+    list-style-type: none;
+    font-size: 110%;
+    margin-bottom: 7px;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+#smaller{
+    font-size: 90%;
+    color: white;
+}
+
+.italic_yellow{
+    color: yellow;
+    font-style: italic;
+    font-size: 120%;
+    display: block;
+    margin-top: 15px;
+}
+
+#texts{
+    text-align: center;
+    color: white;
+    width: 570px;
+    height: 400px;
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: 60px;
+}
+
+#body{
+    height: 350px;
+}
+
+#also_small{
+    font-size: 90%;
+    text-align: center;
+}
+
+#left ul li{
+    color: cornflowerblue;
+}
+
+#right ul li{
+    color: cornflowerblue;
+}
+
+#link{
+    color: cornflowerblue;
+}
+
+#left{
+    text-align: center;
+    background-color: white;
+    display: inline-block;
+    width: 480px;
+    height: 250px;
+    vertical-align: 36px;
+}
+
+#right{
+    text-align: center;
+    background-color: white;
+    display: inline-block;
+    width: 490px;
+    height: 250px;
+}
+
+.bar{
+    background-color: cornflowerblue;
+    width: 440px;
+    height: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#smallest{
+    font-size: 70%;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
+.normal{
+    margin-left: 70px;
+    display: inline-block;
+}
+
+#footer span:first-child{
+    margin-left: 200px;
+}
+
+#footer{
+    width: 970px;
+    height: 60px;
+    color: cornflowerblue;
+    margin-top: 60px;
+}

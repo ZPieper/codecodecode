@@ -1,0 +1,22 @@
+<h1>Edit a User</h1>
+
+<a href="/users/<%= current_user.id %>">Back</a>
+
+<% if flash[:alert] %>
+	<% flash[:alert].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+<form action = "/users/<%= session[:user_id] %>/edit" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<input type="hidden" name="_method" value="patch">
+	<label>Name: <input type = 'text' name = 'user[name]' value = '<%= current_user.name %>' required></label>
+	<label>Email: <input type = 'email' name = 'user[email]' value = '<%= current_user.email %>' required></label>
+	<input type = "submit" value = "Update">
+</form>
+
+<form action = "/users/<%= session[:user_id] %>" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<input type = "hidden" name = "_method" value = "delete">
+	<input type = "submit" value = "Delete Account">
+</form>

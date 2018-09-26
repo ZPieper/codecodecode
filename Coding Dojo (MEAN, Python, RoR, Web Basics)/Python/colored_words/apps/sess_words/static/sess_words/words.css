@@ -1,0 +1,106 @@
+#entire{
+	width: 855px;
+	height: 620px;
+	padding: 10px;
+	display: inline-block;
+	vertical-align: top;
+	background-image: url("https://wallpapertag.com/wallpaper/full/c/e/4/305174-full-size-80s-background-2560x1440.jpg");
+}
+
+#creation{
+	width: 200px;
+	height: 270px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: lightgrey;
+	padding: 10px;
+	margin-right: 10px;
+	opacity: 0.95;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#list{
+	width: 600px;
+	height: 600px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: lightgrey;
+	padding: 10px;
+	opacity: 0.95;
+	overflow: scroll;
+}
+
+.green{
+	color: green;
+	font-size: 15px;
+}
+
+.blue{
+	color: blue;
+	font-size: 15px;
+}
+
+.pink{
+	color: pink;
+	font-size: 15px;
+}
+
+.purple{
+	color: purple;
+	font-size: 15px;
+}
+
+.orange{
+	color: orange;
+	font-size: 15px;
+}
+
+.yellow{
+	color: yellow;
+	font-size: 15px;
+}
+
+.True{
+	font-size: 30px;
+}
+
+label{
+	display: block;
+	margin-left: 15px;
+}
+
+label:nth-child(3){
+	margin-top: 15px;
+}
+
+span{
+	font-size: 16px;
+	color: black;
+}
+
+li{
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#check{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.btn{
+	display: block;
+	margin: auto;
+	width: 100px;
+	height: 30px;
+	color: white;
+	background-color: green;
+}
+
+#clear{
+	background-color: red;
+}
+
+#enter{
+	margin-left: 25px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login/Register Page</title>
+</head>
+<body>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				{{ message }}
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	<h1>Login</h1>
+	<form action = '/login' method = 'post'>
+		<label>Email Address: <input type = 'text' name = 'email_login'></label>
+		<label>Password: <input type = 'password' name = 'pw_login'></label>
+		<input type = 'submit' value = 'Submit'>
+	</form>
+	<h1>Register</h1>
+	<form action = '/register' method = 'post'>
+		<label>First Name: <input type = 'text' name = 'fname_reg'></label>
+		<label>Last Name: <input type = 'text' name = 'lname_reg'></label>
+		<label>Email Address: <input type = 'text' name = 'email_reg'></label>
+		<label>Password: <input type = 'password' name = 'pw_reg'></label>
+		<label>Password Confirmation: <input type = 'password' name = 'pwconf_reg'></label>
+		<input type = 'submit' value = 'Submit'>
+	</form>
+</body>
+</html>

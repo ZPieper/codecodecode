@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CitiBank Homepage</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset = "utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+    <script>
+   $(document).ready(function() {
+       $(".hover_white").hover(function () {
+       		$(this).css("color", "white");
+       }, function() {
+       		$(this).css("color", "white");
+       });
+
+       $(".navbar-light a").hover(function () {
+       		$(this).css("color", "cornflowerblue");
+       }, function() {
+       		$(this).css("color", "black");
+       });
+   });
+	</script>
+</head>
+<body>
+	<div id = "header">
+		<div> 
+			<a class = "hover_white" href = "#">Open an Account</a>
+  			<a class = "hover_white" href = "#">Español</a>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<nav class="navbar navbar-dark bg-primary">
+  			<span>citi</span>
+  			<img src="../front_page/images/magnifying-glass.png" alt = "Magnifying Glass">
+		</nav>
+	</div>
+	<div class="container-fluid">
+		<nav class="navbar navbar-light bg-light">
+			<div>
+  				<a href = "#">Credit Cards</a>
+  				<a href = "#">Banking</a>
+  				<a href = "#">Lending</a>
+  				<a href = "#">Investing</a>
+  				<a href = "#">Citigold®</a>
+  			</div>
+  			<a id = "bold" href = "#">Sign On</a>
+		</nav>
+	</div>
+	<div id = "gray" class="container-fluid">
+		<img id = "pic1" src="../front_page/images/credit-cards.png" alt = "Credit Cards">
+		<div id = "gray_smaller">
+			<p>CITI® CREDIT CARDS</p>
+			<h1>Choose the right Citi® credit card for you</h1>
+			<p>Whether you want Cash Back, Great Rewards, or a Low Intro Rate, the choice is all yours.</p>
+			<button type="button" class="btn btn-link">Learn More</button>
+		</div>
+		<img id = "pic2" src="../front_page/images/credit-cards.png" alt = "Credit Cards">
+		<div id = "white">
+			<h5>Sign On</h5>
+			<input class="form-control" id = "first" type="text" placeholder="User ID">
+			<input class="form-control" type="text" placeholder="Password">
+			<div class="form-check">
+  				<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  				<label class="form-check-label" for="defaultCheck1">Remember My User ID</label>
+			</div>
+			<button type="button" class="btn btn-primary">Sign On</button>
+			<div id = "top_link_div" class = "link_holder">
+			<a class = "smaller" id = "first_link" href = "#">Forgot User ID?</a>
+  			<a class = "smaller" href = "#">Activate a Card</a>
+  			</div>
+  			<div class = "link_holder">
+  			<a class = "smaller" href = "#">Forgot Password?</a>
+  			<a class = "smaller" href = "#">Register for Online Access</a>
+  			</div>
+		</div>
+	</div>
+	<div class = "container" id = "main_container">
+		<div class = "row" id = "padded">
+			<div id = "top_container" class = "container col-md">
+				<h4 class = "head2">Earn Cash Back Twice</h4>
+				<img class = "mid_img" src="../front_page/images/one_card.jpeg">
+				<div class = "mid_div">
+					<h4 class = "head1">Earn Cash Back Twice</h4>
+					<span class = "mid_span">Earn 2% cash back on purchases: 1% when you buy and 1% as you pay.</span>
+					<a class = "mid_link" href="#">Learn More ></a>
+				</div>
+			</div>
+			<div class = "container col-md">
+				<h4 class = "head2">See What's New</h4>
+				<img class = "mid_img" src="../front_page/images/three_cards.jpeg">
+				<div class = "mid_div">
+					<h4 class = "head1">See What's New</h4>
+					<span class = "mid_span">Check out Citi's newest airline credit card, the AAdvantage MileUpSM Card, to help you meet your travel needs.</span>
+					<a class = "mid_link" href="#">Learn More ></a>
+				</div>
+			</div>
+			<div class = "container col-md">
+				<h4 class = "head2">Earn Up To $400</h4>
+				<img class = "mid_img" src="../front_page/images/lady.jpeg">
+				<div class = "mid_div">
+					<h4 class = "head1">Earn Up To $400</h4>
+					<span class = "mid_span">Open a new checking account and complete qualifying activities.</span>
+					<a class = "mid_link" href="#">Learn More ></a>
+				</div>
+			</div>
+			<div class = "container enlarge">
+				<img class = "lower_img" src="../front_page/images/global_citizen.jpg">
+				<div class = "lower_div">
+					<p>#GLOBALCITIZEN</p>
+					<h3>Be the Generation to Take Action</h3>
+					<p>Citi is the proud presenting partner of Global Citizen Festival. • 9.29.18 • Central Park, New York, NY</p>
+					<button type="button" class="btn btn-primary lower_btn">Learn More</button>
+				</div>
+			</div>
+			<div class = "container enlarge" id = "border_bottom">
+				<img class = "lower_img" id = "hands1" src="../front_page/images/hands.jpg">
+				<div class = "lower_div right">
+					<p>LIFE AND MONEY BY CITI</p>
+					<h3>Use (Don't Lose) Your Travel Credit Card Rewards</h3>
+					<p>What do savvy travelers know about travel? How to maximize their travel credit card rewards.</p>
+					<button type="button" class="btn btn-primary lower_btn">Learn More</button>
+				</div>
+				<img class = "lower_img" id = "hands2" src="../front_page/images/hands.jpg">
+			</div>
+		</div>
+		<div class = "container" id = "cyber">
+			<div>
+				<p>PROTECT YOUR FAMILY ONLINE</p>
+				<h2>A few easy steps can help keep you safe.</h2>
+			</div>
+			<div class = "row" id = "white_div">
+				<img id = "lowest_img" src="../front_page/images/family.png">
+				<div id = "white_inner_div">
+					<p>PROTECT YOUR FAMILY ONLINE</p>
+					<h2>Family Cyber Safety</h2>
+					<h6>Educating loved ones on Cyber Safety is more important than ever. Teach your family to recognize potential online dangers.</h6>
+					<a class = "mid_link"  href="#">Learn More ></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class = "container" id = "footer">
+		<div class = "row">
+			<div class = "col">
+				<span id = "logo">citi</span>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "border_list col-xl-12 col-md-12 col-lg-2 col-xl-2" id = "top_list">
+				<p><span class = "arrow_down">V</span> Why Citi</p>
+				<ul>
+					<li class = "top">Why Citi</li>
+					<li><a class = "hover_white" href = "#">Our Story</a></li>
+					<li><a class = "hover_white" href = "#">Careers</a></li>
+					<li><a class = "hover_white" href = "#">Benefits and Services</a></li>
+					<li><a class = "hover_white" href = "#">Rewards</a></li>
+					<li><a class = "hover_white" href = "#">Citi Easy DealsSM</a></li>
+					<li><a class = "hover_white" href = "#">Citi® Private Pass®</a></li>
+					<li id = "push_down"><a class = "hover_white" href = "#">Special Offers</a></li>
+				</ul>
+			</div>
+			<div class = "border_list col-xl-12 col-md-12 col-lg-2 col-xl-2">
+				<p><span class = "arrow_down">V</span> Relationship Banking</p>
+				<ul>
+					<li class = "top">Relationship Banking</li>
+					<li><a class = "hover_white" href = "#">Citi Priority</a></li>
+					<li><a class = "hover_white" href = "#">Citigold®</a></li>
+					<li><a class = "hover_white" href = "#">Citi Private Bank</a></li>
+				</ul>
+			</div>
+			<div class = "border_list col-xl-12 col-md-12 col-lg-2 col-xl-2">
+				<p><span class = "arrow_down">V</span> Business Banking</p>
+				<ul>
+					<li class = "top">Business Banking</li>
+					<li><a class = "hover_white" href = "#">Small Business Accounts</a></li>
+					<li><a class = "hover_white" href = "#">Commercial Accounts</a></li>
+				</ul>
+			</div>
+			<div class = "border_list col-xl-12 col-md-12 col-lg-2 col-xl-2">
+				<p><span class = "arrow_down">V</span> Rates</p>
+				<ul>
+					<li class = "top">Rates</li>
+					<li><a class = "hover_white" href = "#">Personal Banking</a></li>
+					<li><a class = "hover_white" href = "#">Credit Cards</a></li>
+					<li><a class = "hover_white" href = "#">Mortgage</a></li>
+					<li><a class = "hover_white" href = "#">Home Equity</a></li>
+					<li><a class = "hover_white" href = "#">Lending</a></li>
+				</ul>
+			</div>
+			<div class = "border_list col-xl-12 col-md-12 col-lg-2 col-xl-2">
+				<p><span class = "arrow_down">V</span> Help & Support</p>
+				<ul>
+					<li class = "top">Help & Support</li>
+					<li><a class = "hover_white" href = "#">Contact Us</a></li>
+					<li><a class = "hover_white" href = "#">Help & FAQs</a></li>
+					<li><a class = "hover_white" href = "#">Security Center</a></li>
+				</ul>
+			</div>
+			<div class = "col-xl-12 col-md-12 col-lg-2 col-xl-2">
+				<p class = "top" id = "atm">ATM/Branch Locations ></p>
+				<input class="form-control" id = "bottom_search" type="text" placeholder="Enter Address">
+				<button type="button" class="btn btn-primary" id = "bottom_btn">Find Locations</button>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col" id = "small_links">
+				<p><span>© 2018 Citigroup Inc</span></p>
+				<p><a class = "links hover_white" href = "#">Terms & Conditions</a></p>
+				<p><a class = "links hover_white" href = "#">Privacy</a></p>
+				<p><a class = "links hover_white" href = "#">Accessibility</a></p>
+				<p>Country & Jurisdictions:  <span><a class = "links hover_white" href = "#">United States ></a></span></p>
+				<p><a class = "links hover_white" href = "#">Feedback</a> +</p>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col" id = "legal_info">
+				<p>Citibank.com provides information about and access to accounts and financial services provided by Citibank, N.A. and its affiliates in the United States and its territories. Terms, conditions and fees for accounts, products, programs and services are subject to change. Not all accounts, products, and services as well as pricing described here are available in all jurisdictions or to all customers. Your country of citizenship, domicile, or residence, if other than the United States, may have laws, rules, and regulations that govern or affect your application for and use of our accounts, products and services, including laws and regulations regarding taxes, exchange and/or capital controls that you are responsible for following.</p>
+				<p>The products, account packages, promotional offers and services described in this website may not apply to customers of <a class = "links bottom_links hover_white" href="#">Citigold Private Client</a>, <a class = "links bottom_links hover_white" href="#">Citigold International</a>, <a class = "links bottom_links hover_white" href="#">International Personal Banking</a> or <a class = "links bottom_links hover_white" href="#">Global Executive Banking</a>.</p>
+				<p>03.1</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<form action = "/sessions/destroy">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<input type = "submit" value = "Log Out">
+</form>
+
+<a href="/users/<%= session[:user_id] %>/edit">Edit Profile</a>
+<a href="/secrets">All Secrets</a>
+
+<h1>Welcome, <%= current_user.name %></h1>
+
+<% if flash[:alert] %>
+	<% flash[:alert].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+
+<form action = "/secrets" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<input type = "text" name = "secret[content]" required>
+	<input type = "hidden" name = "secret[user_id]" value = "<%= current_user.id %>">
+	<input type = "submit" value = "Create Secret">
+</form>
+
+<h2>My Secrets</h2>
+<% if @secrets %>
+	<% @secrets.each do |secret| %>
+		<% if session[:user_id] == secret.user_id %>
+		<%= secret.content %>
+		<form action = "/secrets/<%= secret.id %>" method = "post">
+			<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+			<input type = "hidden" name = "_method" value = "delete">
+			<input type = "submit" value = "Delete Secret">
+		</form>
+		<% end %>
+	<% end %>
+<% end %>

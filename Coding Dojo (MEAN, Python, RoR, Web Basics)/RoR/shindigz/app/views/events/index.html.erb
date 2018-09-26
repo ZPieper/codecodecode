@@ -1,0 +1,98 @@
+<h3>Welcome, <%= @user.first_name %>!</h3>
+<a href = "/user/<%= @user.id %>" class = "link">Edit My Profile</a>
+<a href = "/logout" class = "link">Logout</a>
+
+<% if flash[:notice] %>
+	<% flash[:notice].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+
+<h3>Events in your state:</h3>
+<table class = "container">
+	<tr>
+		<th>Name</th>
+		<th>Date</th>
+		<th>Location</th>
+		<th>Host</th>
+		<th>Action/Status</th>
+	</tr>
+	<% if @instates %>
+		<% @instates.each do |instate| %>
+			<tr>
+				<td><a href="/events/<%= instate.id %>"><%= instate.name %></a></td>
+				<td><%= instate.date %></td>
+				<td><%= instate.city %></td>
+				<td><%= instate.user.first_name %></td>
+				<td>
+					<% if instate.user.id == @user.id %>
+						<a href="/events/<%= instate.id %>/edit" class = "push_right">Edit</a>
+						<a href="/events/<%= instate.id %>/delete">Delete</a>
+					<% elsif instate.attendees.include?(@user) %>
+						<span>Joining </span> <a href="/events/<%= instate.id %>/unattend">Cancel</a>
+					<% else %>
+						<a href="/events/<%= instate.id %>/attend">Join</a>
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+	<% end %>
+</table>
+
+<h3>Events not in your state:</h3>
+<table class = "container">
+	<tr>
+		<th>Name</th>
+		<th>Date</th>
+		<th>Location</th>
+		<th>State</th>
+		<th>Host</th>
+		<th>Action/Status</th>
+	</tr>
+	<% if @outstates %>
+		<% @outstates.each do |outstate| %>
+			<tr>
+				<td><a href="/events/<%= outstate.id %>"><%= outstate.name %></a></td>
+				<td><%= outstate.date %></td>
+				<td><%= outstate.city %></td>
+				<td><%= outstate.state %></td>
+				<td><%= outstate.user.first_name %></td>
+				<td>
+					<% if outstate.user.id == @user.id %>
+						<a href="/events/<%= outstate.id %>/edit" class = "push_right">Edit</a>
+						<a href="/events/<%= outstate.id %>/delete">Delete</a>
+					<% elsif outstate.attendees.include?(@user) %>
+						<span>Joining </span> <a href="/events/<%= outstate.id %>/unattend">Cancel</a>
+					<% else %>
+						<a href="/events/<%= outstate.id %>/attend">Join</a>
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+	<% end %>
+</table>
+
+<div class = "box" id = "block">
+<h3>Add Event</h3>
+
+<% if flash[:alert] %>
+	<% flash[:alert].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+
+<form action = "/events" method = "post">
+	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+	<label>Name: <input type = 'text' name = 'event[name]' required></label>
+	<label>Date: <input type = 'date' name = 'event[date]' required></label>
+	<label>
+		Location: <input type = 'text' name = 'event[city]' required>
+		<select name = 'event[state]' required>
+			<% all_states.each do |state| %>
+				<option value = "<%= state %>"><%= state %></option>
+			<% end %>
+		</select>
+	</label>
+	<input type = "submit" value = "Add Event">
+</form>
+</div>

@@ -1,0 +1,19 @@
+input{
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+}
+
+#pokemon{
+    display: inline-block;
+    width: 600px;
+}
+
+#pokedex{
+    display: inline-block;
+    border: solid 30px red;
+    width: 160px;
+    height: 450px;
+    vertical-align: top;
+    padding-left: 60px;
+}
