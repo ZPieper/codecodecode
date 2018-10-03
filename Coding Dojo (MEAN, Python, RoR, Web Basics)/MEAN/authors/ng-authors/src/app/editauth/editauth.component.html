@@ -1,0 +1,21 @@
+<a [routerLink]="['/']"> Home </a>
+<h4>Edit this author:</h4>
+<form (submit) = "editButton($event)" #form="ngForm">
+	<label>Name: <input 
+		type = "text" 
+		name = "this_author.name"  
+		required
+		minlength="3"
+		maxlength="30" 
+		unique=true
+		[(ngModel)] = "this_author.name"
+		[value] = "this_author.name"
+		#name="ngModel"></label>
+		<small
+			class="errors"
+			[hidden]="(name.valid && !errors.name) || (name.untouched && !form.submitted)">
+			Names of authors are required and must have between 3 and 30 characters.
+		</small>
+	<button [routerLink]="['/']">Cancel</button>
+	<input [disabled]="!form.valid" type="submit" value="Submit" />
+</form>

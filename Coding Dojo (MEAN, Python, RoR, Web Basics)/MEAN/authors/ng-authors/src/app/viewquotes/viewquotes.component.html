@@ -1,0 +1,22 @@
+<a [routerLink]="['/']"> Home</a>
+<br>
+<a [routerLink]="['/write/'+ current_author.id]"> Add a Quote </a>
+<h4>Quotes by {{ current_author.name }}:</h4>
+<div *ngIf = "quotes.length > 0">
+<table style="border: 1px solid black">
+	<tr>
+		<th>Quote</th>
+		<th>Votes</th>
+		<th>Actions Available</th>
+	</tr>
+	<tr *ngFor = "let quote of quotes">
+		<td>"{{ quote.content }}"</td>
+		<td>{{ quote.popularity }}</td>
+		<td>
+			<button (click)="voteButton($event, 1, quote._id)"> Vote Up </button>
+			<button (click)="voteButton($event, -1, quote._id)"> Vote Down </button>
+			<button (click)="deleteQuoteButton($event, quote._id)"> Delete </button>
+		</td>
+	</tr>
+</table>
+</div>

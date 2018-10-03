@@ -1,0 +1,19 @@
+<a [routerLink]="['/']">Home</a>
+<h4>Provide a quote by {{ current_author.name }}:</h4>
+<form (submit) = "createQuoteButton($event, current_author.id)" #form="ngForm">
+	<label>Quote: <input 
+		type = "text" 
+		name = "entry.content" 
+		required
+		minlength="3"
+		maxlength="100"
+		[(ngModel)] = "entry.content"
+		#content="ngModel" ></label>
+		<small
+			class="errors"
+			[hidden]="(content.valid && !errors.content) || (content.untouched && !form.submitted)">
+			Quotes are required and must have between 3 and 100 characters.
+		</small>
+	<button [routerLink]="['/']">Cancel</button>
+	<input [disabled]="!form.valid" type="submit" value="Submit" />
+</form>
