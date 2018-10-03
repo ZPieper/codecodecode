@@ -1,0 +1,8 @@
+<h2>Mine SherylCoins</h2>
+<p>Here you can mine SherylCoins by being the first to solve the question: </p>
+<p>In what season of the US TV show "Big Brother" did Sheryl Crow play a private concert?</p>
+  <form (submit) = "mine($event)">
+    <label>Answer: <input type = "text" name = "entry.input" [(ngModel)] = "entry.input"></label>
+    <input type="submit" value="Mine" />
+  </form>
+  {{ message.text }}

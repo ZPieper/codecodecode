@@ -1,0 +1,26 @@
+<h2>Browse the Ledger</h2>
+<p>Here you can browse all SherylCoin transactions.</p>
+
+<table style="border: 1px solid black">
+	<tr>
+		<th colspan="4">SherylCoin Ledger</th>
+	</tr>
+	<tr>
+		<td>Action</td>
+		<td>Amount</td>
+		<td>Value</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>-</td>
+		<td>-</td>
+		<td>1</td>
+		<td></td>
+	</tr>
+	<tr *ngFor = "let element of actions">
+		<td>{{ element.action }}</td>
+		<td>{{ element.amount }}</td>
+		<td>{{ element.value }}</td>
+		<td><button [routerLink]="['/transaction/'+ element.id]"> Details </button></td>
+	</tr>
+</table>

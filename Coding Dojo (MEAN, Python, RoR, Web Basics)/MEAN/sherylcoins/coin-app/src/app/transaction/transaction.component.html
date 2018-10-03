@@ -1,0 +1,4 @@
+<h2>Ledger Transaction Details</h2>
+<p>Detailed view of a transaction from the ledger.</p>
+<p>Transaction #{{ transaction.id }}</p>
+<p>{{ transaction.action }} {{ transaction.amount }} SherylCoin<span *ngIf = "transaction.amount > 1">s</span></p>

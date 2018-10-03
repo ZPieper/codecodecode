@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:left">
+  <img width="120" alt="Sheryl Crow" src="assets/sheryl.jpg">
+  <button [routerLink]="['home']">Home</button>
+  <button [routerLink]="['mine']">Mine Coins</button>
+  <button [routerLink]="['buy']">Buy Coins</button>
+  <button [routerLink]="['sell']">Sell Coins</button>
+  <button [routerLink]="['browse']">Browse Ledger</button>
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- <div style="text-align:center">
+  <h3>Add a New Task</h3>
+  <form (submit) = "buttonCreate($event)">
+    <label>Title: <input type = "text" name = "newTask.title" [(ngModel)] = "newTask.title"></label>
+    <label>Description: <input type = "text" name = "newTask.description" [(ngModel)] = "newTask.description"></label>
+    <input type="submit" value="Create Task" />
+  </form>
+  <p></p>
+  <button (click)="buttonShow($event)">Show all tasks</button>
+   <h1>List of tasks:</h1>
+    <ul *ngFor="let task of tasks">
+   <li>{{ task.title }}- {{ task.description }}</li>
+   <button (click)="buttonDelete($event, task._id)">Delete</button>
+   <button (click)="buttonEdit($event, task._id)">Edit</button>
+    </ul>
+    <div *ngIf=(!hidden)>
+      <h3>Edit a Task</h3>
+   <form (submit) = "buttonUpdate($event)">
+    <label>Title: <input type = "text" name = "upTask.title" [(ngModel)] = "upTask.title"></label>
+    <label>Description: <input type = "text" name = "upTask.description" [(ngModel)] = "upTask.description"></label>
+    <input type="submit" value="Update" />
+  </form>
+  </div>
+ </div> -->

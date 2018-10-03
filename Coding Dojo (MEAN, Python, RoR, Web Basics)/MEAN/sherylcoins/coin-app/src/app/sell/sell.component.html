@@ -1,0 +1,8 @@
+<h2>Sell SherylCoins</h2>
+<p>Current SherylCoin Value: ${{ currentValue }}</p>
+<p>Number of SherylCoins Owned: {{ bank }}</p>
+  <form (submit) = "sell($event)">
+    <label>How many would you like to sell?: <input type = "text" name = "selling.input" [(ngModel)] = "selling.input"></label>
+    <input type="submit" value="Sell" />
+  </form>
+  {{ message.text }}
