@@ -1,0 +1,175 @@
+.grey {
+	height: 20px;
+	width: 120px;
+	background-color: #cccccc;
+	display: inline-block;
+	margin-left: 10px;
+	border-radius: 10px;
+	transition: background-color 0.75s;
+}
+
+.grey:hover {
+	background-color: lightgreen;
+}
+
+.link {
+	color: black;
+	text-decoration: none;
+	position: relative;
+    left: 20%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#first {
+	left: 35%;
+}
+
+#last {
+	left: 10%;
+}
+
+#game_link {
+	left: 15%;
+}
+
+h3 {
+	font-weight: normal;
+}
+
+label {
+	display: block;
+	text-align: center;
+}
+
+.error {
+	color: red;
+}
+
+.correct {
+	color: green;
+}
+
+#answer {
+	display: block;
+	width: 150px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+.grid {
+	border: thin solid lightgray;
+	line-height: 0;
+	margin-bottom: 0.75rem;
+	width: 100%;
+	background-color: black;
+}
+
+.cell {
+	border: thin solid lightgray;
+	display: inline-block;
+	height: 75px;
+}
+
+.message {
+	float: right;
+	font-weight: bold;
+}
+
+#blue {
+	background-color: #6600ff;
+	transition: background-color 0.75s;
+}
+
+#blue:hover {
+	background-color: indianred;
+}
+
+#whole {
+	width: 900px;
+	margin: auto;
+}
+
+#link_holder {
+	width: 790px;
+	margin: auto;
+}
+
+.component {
+	margin-top: 20px;
+	padding: 15px;
+	border: 5px solid black;
+	border-radius: 25px;
+	transition: border 7s;
+}
+
+.component:hover {
+	border: 5px solid yellow;
+}
+
+#turn_purple, #turn_orange, #turn_red {
+	transition: border 7s;
+}
+
+#turn_purple:hover {
+	border: 5px solid #d279d2;
+}
+
+#turn_orange:hover {
+	border: 5px solid orange;
+}
+
+#turn_red:hover {
+	border: 5px solid #ff6666;
+}
+
+#right {
+	float: right;
+}
+
+.half {
+	display: inline-block;
+	width: 48%;
+	height: 110px;
+	border: 3px solid darkslateblue;
+	border-radius: 15px;
+	vertical-align: top;
+	padding: 5px;
+	transition: border 4s;
+}
+
+.half:hover {
+	border: 3px solid powderblue;
+}
+
+.inputs {
+	width: 300px;
+	height: 22px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.push_right {
+	margin-right: 20px;
+}
+
+.button {
+	background-color: blue;
+	color: white;
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	transition: background-color 0.25s;
+}
+
+.button:hover {
+	background-color: mediumseagreen;
+}
