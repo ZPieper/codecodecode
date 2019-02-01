@@ -70,6 +70,7 @@ class Mine extends React.Component {
               <h1>Mine Coins</h1>
               <h3>Here you can mine coins if you get trivia questions correct!</h3>
               <div className = "half">
+                  <h5>True or False?</h5>
                   <label> 
                      <span className = "title">{this.state.question}</span>
                   </label>
