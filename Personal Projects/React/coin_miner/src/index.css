@@ -173,3 +173,24 @@ h1 {
 .button:hover {
 	background-color: mediumseagreen;
 }
+
+h4 {
+	margin-bottom: 5px;
+}
+
+.more_space {
+	margin-right: 55px;
+}
+
+.push_up {
+	margin-top: 10px;
+}
+
+.sized, .smaller_sized {
+	display: inline-block;
+	width: 85px;
+}
+
+.smaller_sized {
+	width: 60px;
+}

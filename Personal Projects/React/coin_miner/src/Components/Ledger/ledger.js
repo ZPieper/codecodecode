@@ -11,19 +11,21 @@ class Row extends React.Component {
 
 	render () {
 		return (
-			<div>
-				<tr>
-					<td>{this.information["action"]}</td>
-					<td>{this.information["amt"]}</td>
-					<td>{this.information["value"]}</td>
-					<td>
-						<BrowserRouter>
-							<div>
-								<Link to={`/transaction/${this.information["id"]}`} onClick = {() => this.props.changePage(this.information)}>See This Transaction</Link>
-							</div>
-						</BrowserRouter>
-					</td>
-				</tr>
+			<div className = "push_up">
+				<div className = "sized">
+					<strong>{this.information["action"]}</strong>
+				</div>
+				<div className = "smaller_sized">
+					<span>{this.information["amt"]}</span>
+				</div>
+				<div className = "sized">
+					<span>{this.information["value"]}</span>
+				</div>
+					<BrowserRouter>
+						<span>
+							<Link to={`/transaction/${this.information["id"]}`} onClick = {() => this.props.changePage(this.information)}>See This Transaction</Link>
+						</span>
+					</BrowserRouter>
 			</div>
 		)
 	}
@@ -73,24 +75,14 @@ class Ledger extends React.Component {
             	</div>:
             	<div>
             	<h1>Browse the Ledger</h1>
-            	<table>
-            		<tbody>
-            		<tr>
-            			<th>ShintoCoin Ledger</th>
-            		</tr>
-            		<tr>
-            			<td>Action</td>
-            			<td>Amount</td>
-            			<td>Value</td>
-            			<td></td>
-            		</tr>
-            		{(this.state.list) && (this.state.list.length > 0) ? this.state.list.map((i) => {
+            	<span className = "push_right">Action</span>
+            	<span className = "push_right">Amount</span>
+            	<span className = "push_right">Value</span>
+                {(this.state.list) && (this.state.list.length > 0) ? this.state.list.map((i) => {
             			return (
             				<Row key = {i} info = {i} changePage = {changePage.bind(this)}/>
             			)
             		}) : null}
-            		</tbody>
-                </table>
                 </div>
             	}
             </div>
