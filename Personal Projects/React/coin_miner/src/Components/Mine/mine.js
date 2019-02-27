@@ -54,7 +54,7 @@ class Mine extends React.Component {
 
   	getQuestion () {
   		if (this._isMounted) {
-			fetch('https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean')
+			fetch('https://opentdb.com/api.php?amount=1&type=boolean')
     			.then(data => {
     				return data.json()
     			})

@@ -77,6 +77,11 @@ class App extends React.Component {
                     	<Route path = "/mem_game" render = {() => <Game gridSize = {4} challengeSize = {4}  wrongsAllowed = {2} />} />
                     	<Route component = {Home} />
                     </Switch>
+                    <div id = "footer">
+                    	<div className = "grey" id = "help_link">
+                    		<a href = "https://assistant-chat-us-south.watsonplatform.net/web/public/881e5654-0def-4e2f-b9be-f866becc4660" target = "_blank" rel = "noopener noreferrer" className = "link">Get Help</a>
+                    	</div>
+                    </div>
                 </div>
             </BrowserRouter>
         )

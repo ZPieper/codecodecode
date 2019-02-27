@@ -1,3 +1,7 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 .grey {
 	height: 20px;
 	width: 120px;
@@ -12,25 +16,34 @@
 	background-color: lightgreen;
 }
 
+#help_link {
+	background-color: #ffd699;
+	transition: background-color 0.75;
+}
+
+#help_link:hover {
+	background-color: aqua;
+}
+
 .link {
 	color: black;
 	text-decoration: none;
 	position: relative;
-    left: 20%;
+    left: 18%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
 
 #first {
-	left: 35%;
+	left: 30%;
 }
 
 #last {
-	left: 10%;
+	left: 5%;
 }
 
 #game_link {
-	left: 15%;
+	left: 10%;
 }
 
 h3 {
@@ -91,7 +104,7 @@ h5 {
 }
 
 #blue {
-	background-color: #6600ff;
+	background-color: #d279d2;
 	transition: background-color 0.75s;
 }
 
@@ -199,4 +212,18 @@ h4 {
 
 .smaller_sized {
 	width: 60px;
+}
+
+#footer {
+	width: 120px;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+#footer .grey {
+	margin-left: 0px;
+}
+
+#footer a {
+	left: 25%;
 }
